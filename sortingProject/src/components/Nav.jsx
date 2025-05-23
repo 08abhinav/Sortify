@@ -9,12 +9,11 @@ const Nav = () => {
         
         {/* Left: Logo */}
         <div className="flex items-start space-x-2">
-          <div className="text-white font-bold text-2xl">🔢</div>
+          <div className="text-white font-bold text-3xl">🔢</div>
           <div className='flex flex-col'>
-            <span className="text-white text-2xl font-mono leading-tight font-semibold">Sortify</span>
+            <span className="text-white text-3xl font-mono leading-tight font-semibold">Sortify</span>
             <span className='text-sm text-white font-mono font-semibold'>Sorting Algorithms, Made Simple.</span>
           </div>
-          
         </div>
 
         {/*  Nav Links  */}
