@@ -1,10 +1,11 @@
 import { useState } from 'react'
-import SortingVisualizer from './visualizer/SortingVisualizer'
 import './index.css'
-import Nav from './components/Nav'
 import Home from './pages/Home'
 import { Route, Routes } from 'react-router-dom'
 import About from './pages/About'
+import Description from './pages/Description'
+import SortingVisualizer from './visualizer/SortingVisualizer'
+import Visualizer from './components/Visualizer'
 
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<About />} />
-        {/* <Route path="/visualizer" element={<Visualizer />} /> */}
+        <Route path="/description" element={<Description />} />
+        <Route path="/visualize/:type" element={<SortingVisualizer   />} />
     </Routes>
     </div>
   )
