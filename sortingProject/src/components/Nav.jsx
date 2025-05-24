@@ -26,7 +26,7 @@ const Nav = () => {
             About
             <span className='absolute left-0 -bottom-1 h-0.5 w-0 bg-gray-400 transition-all duration-400 group-hover:w-full'></span>
           </Link>
-          <Link to="/visualizer" className="relative group font-semibold text-white text-lg font-mono hover:text-gray-400 transition duration-400">
+          <Link to="/description" className="relative group font-semibold text-white text-lg font-mono hover:text-gray-400 transition duration-400">
             Visualizer
             <span className='absolute left-0 -bottom-1 h-0.5 w-0 bg-gray-400 transition-all duration-400 group-hover:w-full'></span>
           </Link>
