@@ -14,7 +14,7 @@ const Bar = ({ value, state, maxVal }) => {
   return (
     <div className="flex flex-col items-center justify-end">
       <div
-        className={`w-4 ${getColor(state)} rounded-t transition-all duration-300 `}
+        className={`w-6 ${getColor(state)} rounded-t transition-all duration-300 `}
         style={{
           height: `${heightPercent}px`,
           minHeight: '5px',
