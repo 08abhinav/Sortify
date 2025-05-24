@@ -1,12 +1,12 @@
-import FloatingParicles from '@/components/FloatingParicles';
-import Nav from '@/components/Nav'
 import React from 'react'
-import Particles from "react-tsparticles";
+import Nav from '../components/Nav'
+import FloatingParicles from '../components/FloatingParicles';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
     <>
-        <Nav/>      
+        <Nav/>
         <section className="relative h-screen flex flex-col justify-center items-center text-center bg-black overflow-hidden">
             {/* Content */}
             <h1 className="text-white font-mono text-5xl md:text-7xl font-bold mb-6">
@@ -18,7 +18,7 @@ const Home = () => {
             </p>
 
             <button className="px-8 py-3 rounded-lg bg-indigo-600 hover:bg-indigo-700  text-white font-semibold transition">
-                Try Sortify Now
+                <Link to="/description">Try Sortify Now</Link>
             </button>
 
             {/* GIF Preview */}
