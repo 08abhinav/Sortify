@@ -7,6 +7,7 @@ const Bar = ({ value, state, maxVal }) => {
       case 'compare': return 'bg-yellow-400';
       case 'swap': return 'bg-red-500';
       case 'sorted': return 'bg-green-500';
+      case 'divide': return 'bg-gray-800';
       default: return 'bg-blue-500';
     }
   };
