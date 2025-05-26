@@ -47,7 +47,47 @@ const algopseudoCode = {
     "    j++",
     "  for k = left to right",
     "    arr[k] = temp[k - left]"
+  ],
+  quick:[
+    "function quickSort(arr, low, high)",
+    "  if low < high",
+    "    pivotIndex = partition(arr, low, high)",
+    "    quickSort(arr, low, pivotIndex - 1)",
+    "    quickSort(arr, pivotIndex + 1, high)",
+    "function partition(arr, low, high)",
+    "  pivot = arr[high]",
+    "  i = low - 1",
+    "  for j = low to high - 1",
+    "    if arr[j] < pivot",
+    "      i++",
+    "      swap arr[i] and arr[j]",
+    "  swap arr[i+1] and arr[high]",
+    "  return i + 1"
+  ],
+  heap:[
+    "function heapSort(arr)",
+    "  buildMaxHeap(arr)",
+    "  for i from n-1 to 1",
+    "    swap arr[0] and arr[i]",
+    "    heapify(arr, 0, i)",
+    "",
+    "function buildMaxHeap(arr)",
+    "  for i from ⌊n/2⌋ - 1 to 0",
+    "    heapify(arr, i, n)",
+    "",
+    "function heapify(arr, i, heapSize)",
+    "  largest = i",
+    "  left = 2*i + 1",
+    "  right = 2*i + 2",
+    "  if left < heapSize and arr[left] > arr[largest]",
+    "    largest = left",
+    "  if right < heapSize and arr[right] > arr[largest]",
+    "    largest = right",
+    "  if largest != i",
+    "    swap arr[i] and arr[largest]",
+    "    heapify(arr, largest, heapSize)"
   ]
+
 }
 
 export default algopseudoCode
