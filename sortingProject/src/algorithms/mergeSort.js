@@ -50,7 +50,11 @@ export const mergeSort = async (arr, setArray, speed, setCurrentLine) => {
 
     setCurrentLine(14);
     for (let k = left; k <= right; k++) {
-      array[k] = temp[k - left];
+      array[k] = { ...temp[k - left], state: 'swap' };
+      setArray([...array])
+      await delay(speed);
+
+      
       array[k].state = 'sorted';
       setArray([...array]);
       await delay(speed);
@@ -63,9 +67,8 @@ export const mergeSort = async (arr, setArray, speed, setCurrentLine) => {
 
     const mid = Math.floor((left + right) / 2);
 
-    // Highlight current subarray as "dividing"
     for (let k = left; k <= right; k++) {
-      array[k].state = 'dividing';
+      array[k].state = 'divide';
     }
     setArray([...array]);
     await delay(speed);
@@ -76,7 +79,6 @@ export const mergeSort = async (arr, setArray, speed, setCurrentLine) => {
     setCurrentLine(5);
     await mergeRecursive(mid + 1, right);
 
-    // Reset states before merging
     for (let k = left; k <= right; k++) {
       array[k].state = 'default';
     }
