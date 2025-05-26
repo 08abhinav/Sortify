@@ -31,7 +31,7 @@ Sortify is an interactive web application that visually demonstrates how various
 ---
 
 ## 📁 Folder Structure
-
+<pre>
 sortingProject/
 ├── public/
 │ └──icon.png
@@ -68,16 +68,28 @@ sortingProject/
 │ └── main.jsx
 ├── index.html
 └── README.md
-
+</pre>
 ---
 
 # To run Sortify locally
-- git clone https://github.com/08abhinav/Sortify.git
+- git clone `https://github.com/08abhinav/Sortify.git`
 - cd sortingProject
-<pre> ```bash npm i # or yarn i # or pnpm i # ``` </pre>
+<pre> ```bash 
+npm i 
+# or 
+yarn i 
+# or 
+pnpm i 
+``` </pre>
 
 - run the server
-<pre> ```bash npm run dev # or yarn dev # or pnpm dev ``` </pre>
+<pre> ```bash
+npm run dev 
+# or 
+yarn dev 
+# or
+pnpm dev 
+``` </pre>
 
 - Open `http://localhost:5173` with your browser.
 
