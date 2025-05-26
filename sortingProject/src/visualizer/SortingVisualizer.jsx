@@ -22,7 +22,7 @@ const SortingVisualizer = () => {
             {/* left side */}
             <div className='w-full md:w-1/2 p-4 m-6'>
               <h2 className='text-xl font-semibold font-mono'>Pseudocode</h2>
-              <div className='md:w-1/2 mt-2 w-full'>
+              <div className='md:w-3/4 mt-2 w-full'>
                 <PseudoCodeHighligt
                 lines={algopseudoCode[type] || 'unsupported algo'}
                 currentLine={currentLine}/>
