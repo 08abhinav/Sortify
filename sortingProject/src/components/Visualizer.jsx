@@ -4,12 +4,20 @@ import { Button } from '@/components/ui/button';
 import {bubbleSort} from '@/algorithms/bubbleSort'
 import { insertionSort } from '@/algorithms/insertionSort';
 import { selectionSort } from '@/algorithms/selectionSort';
+import { mergeSort } from '@/algorithms/mergeSort';
+import { quickSort } from '@/algorithms/quickSort';
+import { heapSort } from '@/algorithms/heap';
+import { useParams } from 'react-router-dom';
+import AlgorithmInfo from './AlgoInfo';
 
-const Visualizer = ({type, setCurrentLine}) => {
+const Visualizer = ({setCurrentLine}) => {
   const [array, setArray] = useState([]);
   const [speed, setSpeed] = useState(100);
   const [isSorting, setIsSorting] = useState(false)
   const [arrlen, setArrLen] = useState(8)
+  const [showInfo, setShowInfo] = useState(true);
+  const {type} = useParams();
+
   const maxVal = Math.max(...array.map(item=> item.value)|| 0)
     useEffect(()=>{
     resetArray();
@@ -17,14 +25,23 @@ const Visualizer = ({type, setCurrentLine}) => {
 
     const handleSorting = async()=>{
         setIsSorting(true)
-        if(type=== 'bubble'){
+        if(type === 'bubble'){
             await bubbleSort(array, setArray, speed, setCurrentLine);
         }
-        else if (type=== 'insertion'){
+        else if (type === 'insertion'){
             await insertionSort(array, setArray, speed, setCurrentLine);
         }
-        else if(type=== 'selection'){
+        else if(type === 'selection'){
             await selectionSort(array, setArray, speed, setCurrentLine);
+        }
+        else if(type === 'merge'){
+            await mergeSort(array, setArray, speed, setCurrentLine);
+        }
+        else if(type=== 'quick'){
+            await quickSort(array, setArray, speed, setCurrentLine);
+        }
+        else if (type === 'heap'){
+            await heapSort(array, setArray, speed, setCurrentLine);
         }
         else{ 
         alert('Unsupported') 
@@ -41,6 +58,9 @@ const Visualizer = ({type, setCurrentLine}) => {
     }
   return (
     <>
+    {showInfo &&(
+        <AlgorithmInfo type={type} onClose={()=>setShowInfo(false)}/>
+    )}
     <div className='text-white'>
         <div className="flex items-end justify-center space-x-2 h-[300px] px-4">
             {array.map((bar, index) => (
