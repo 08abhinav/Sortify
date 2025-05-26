@@ -96,6 +96,7 @@ const Visualizer = ({setCurrentLine}) => {
             step="5"
             value={speed}
             onChange={(e) => setSpeed(Number(e.target.value))}
+            disabled={isSorting}
             className="w-64 accent-white cursor-pointer"
             />
         </div>
