@@ -37,9 +37,9 @@ export const bubbleSort = async (array, setArray, speed, setCurrentLine) => {
         arr[j].state = 'default';
         arr[j + 1].state = 'default';
       }
-      arr[n-i].state = 'sorted';
-      setArray([...arr])
     }
+    arr[n-i-1].state = 'sorted';
+    setArray([...arr])
   }
 
   setCurrentLine(null);
