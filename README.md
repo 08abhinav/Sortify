@@ -32,7 +32,7 @@ Sortify is an interactive web application that visually demonstrates how various
 
 ## 📁 Folder Structure
 <pre>
-sortingProject/
+Sortify/
 ├── public/
 │ └──icon.png
 ├── src/
